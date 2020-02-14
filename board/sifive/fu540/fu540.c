@@ -13,6 +13,8 @@
 #include <misc.h>
 #include <spl.h>
 
+#include "cache.h"
+
 /*
  * This define is a value used for error/unknown serial.
  * If we really care about distinguishing errors and 0 is
@@ -111,8 +113,8 @@ int misc_init_r(void)
 
 int board_init(void)
 {
-	/* For now nothing to do here. */
-
+	/* enable all cache ways */
+	cache_enable_ways(CACHE_CTRL_ADDR, 15);
 	return 0;
 }
 

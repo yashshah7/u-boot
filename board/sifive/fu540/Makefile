@@ -3,6 +3,7 @@
 # Copyright (c) 2019 Western Digital Corporation or its affiliates.
 
 obj-y	+= fu540.o
+obj-y	+= cache.o
 
 ifdef CONFIG_SPL_BUILD
 obj-y += spl.o
