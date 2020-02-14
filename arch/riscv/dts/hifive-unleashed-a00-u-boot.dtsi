@@ -4,6 +4,7 @@
  */
 
 #include "fu540-c000-u-boot.dtsi"
+#include "fu540-sdram-lpddr4.dtsi"
 
 / {
 	hfclk {
