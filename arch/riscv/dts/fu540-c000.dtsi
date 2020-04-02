@@ -246,6 +246,24 @@
 			#pwm-cells = <3>;
 			status = "disabled";
 		};
-
+		pwm_led {
+			compatible = "pwm-leds";
+			led1 {
+				label = "sifive-led1";
+				pwms = <&pwm0 0 500000000 1>;
+			};
+			led2 {
+				label = "sifive-led2";
+				pwms = <&pwm0 1 500000000 1>;
+			};
+			led3 {
+				label = "sifive-led3";
+				pwms = <&pwm0 2 500000000 1>;
+			};
+			led4 {
+				label = "sifive-led4";
+				pwms = <&pwm0 3 500000000 1>;
+			};
+		};
 	};
 };

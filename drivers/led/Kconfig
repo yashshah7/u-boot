@@ -62,6 +62,12 @@ config LED_GPIO
 	  The GPIO driver must used driver model. LEDs are configured using
 	  the device tree.
 
+config LED_PWM
+	bool "LED support for PWM-connected LEDs"
+	depends on LED && DM_PWM
+	help
+	  Enable support for LEDs which are connected to PWM lines.
+
 config SPL_LED_GPIO
 	bool "LED support for GPIO-connected LEDs in SPL"
         depends on SPL_LED && DM_GPIO
